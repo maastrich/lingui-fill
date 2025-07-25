@@ -3,7 +3,7 @@ import { glob } from "glob";
 import { join, dirname, basename } from "node:path";
 
 const files = await glob(join(process.cwd(), "**/locales/*.json"), {
-  ignore: ["**/node_modules/**"],
+  ignore: ["**/node_modules/**", "**/locales/messages.json"],
 });
 
 type Message = {
